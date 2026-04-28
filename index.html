@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>EcoFuture | Sustainable Living & Green Tech 2026</title>
+  <meta name="description" content="Discover the best strategies for sustainable living in 2026. Expert guides on green technology, solar energy, and zero-waste homes.">
+  <meta name="keywords" content="sustainable living, ecology, green tech, solar energy, zero waste, sustainability 2026, climate change, carbon footprint">
+  <meta name="author" content="EcoFuture Editorial Team">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#fdfbf7">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== DESIGN SYSTEM: NATURE (EARTH & TERRACOTTA) ===== */
+    :root {
+      --bg:      #fdfbf7; /* Very light beige */
+      --bg2:     #ffffff; /* Pure white for cards */
+      --bg3:     #f4f1ea; /* Secondary beige */
+      --card:    #ffffff;
+      --border:  #e3ddd1;
+      --accent:  #d97757; /* Warm Terracotta */
+      --accent2: #b55d40; /* Dark Terracotta */
+      --accent3: #8da399; /* Sage green for contrast */
+      
+      /* BLACK WORDS (Dark text as requested) */
+      --text:    #000000; /* Pure black for main reading */
+      --text2:   #1a1a1a; /* Almost black for subtitles */
+      --text3:   #333333; /* Very dark gray for metadata */
+      --dark:    #000000; /* Pure black for headers */
+      
+      --font-main:    'Nunito Sans', sans-serif;
+      --font-display: 'Lora', serif;
+      --radius: 16px;
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-main);
+      font-size: 18px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    p { text-align: left; margin-bottom: 24px; color: var(--text); }
+    a { color: var(--accent2); text-decoration: none; transition: all 0.3s ease; cursor: pointer; }
+    a:hover { color: var(--accent); }
+    strong { color: var(--dark); font-weight: 900; }
+
+    /* ===== AD SLOTS ===== */
+    .ad-slot {
+      background: var(--bg3);
+      border: 1px dashed #bba;
+      margin: 35px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: var(--text3);
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-radius: var(--radius);
+    }
+    .ad-leaderboard { width: 100%; min-height: 90px; max-width: 970px; }
+    .ad-in-article  { width: 100%; min-height: 250px; max-width: 728px; }
+
+    /* ===== HEADER ===== */
+    header {
+      background: rgba(253, 251, 247, 0.95);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      height: 75px;
+      gap: 20px;
+    }
+    .logo {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--accent3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: white;
+    }
+    nav { display: flex; gap: 10px; margin-left: auto; }
+    nav a {
+      color: var(--text2);
+      font-size: 15px;
+      font-weight: 800;
+      padding: 8px 18px;
+      border-radius: 30px;
+      transition: 0.2s;
+    }
+    nav a:hover, nav a.active {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .page { display: none; padding-bottom: 80px; }
+    .page.active { display: block; animation: fadeIn 0.5s ease; }
+    @keyframes fadeIn { from{opacity:0; transform:translateY(15px)} to{opacity:1; transform:translateY(0)} }
+
+    /* ===== HERO ===== */
+    .home-hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 50px;
+    }
+    .hero-label {
+      display: inline-block;
+      background: var(--accent3);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+    .home-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.1;
+      color: var(--dark);
+      margin-bottom: 25px;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-sub {
+      color: var(--text2);
+      font-size: 20px;
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+    /* ===== ARTICLE LAYOUT ===== */
+    .article-layout { display: flex; gap: 50px; margin-top: 40px; }
+    .article-main { flex: 1; max-width: 800px; }
+    .ad-sidebar-sticky { position: sticky; top: 100px; width: 300px; flex-shrink: 0; align-self: flex-start; }
+
+    /* ===== ARTICLE CONTENT ===== */
+    .article-content h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      color: var(--dark);
+      margin: 50px 0 20px;
+    }
+    .article-hero-img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      margin: 20px 0 40px;
+      box-shadow: var(--shadow);
+    }
+    .article-body-img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 25px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .verdict-box {
+      background: var(--bg3);
+      border-left: 6px solid var(--accent);
+      padding: 35px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 40px 0;
+    }
+    .verdict-box h3 { font-family: var(--font-display); margin-top: 0; color: var(--dark); }
+
+    /* ===== GRID ===== */
+    .section-header {
+      font-family: var(--font-display);
+      font-size: 32px;
+      color: var(--dark);
+      margin: 0 0 40px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid var(--border);
+    }
+    .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 35px; }
+    .article-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: var(--shadow);
+    }
+    .article-card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+    .article-card img { width: 100%; height: 220px; object-fit: cover; }
+    .article-card-body { padding: 30px; }
+    .tag { font-size: 12px; font-weight: 900; color: var(--accent); text-transform: uppercase; margin-bottom: 15px; display: block; letter-spacing: 1px; }
+
+    /* ===== FORMS & LEGAL PAGES ===== */
+    .contact-form, .legal-content {
+      background: var(--card);
+      padding: 50px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      max-width: 800px;
+      margin: 40px auto;
+    }
+    input, textarea {
+      width: 100%; padding: 15px;
+      border: 2px solid var(--bg3); border-radius: 8px; margin-bottom: 20px; font-family: var(--font-main); font-size: 16px;
+      color: var(--text); background: var(--bg);
+    }
+    input:focus, textarea:focus { outline: none; border-color: var(--accent3); }
+    .submit-btn {
+      width: 100%; padding: 16px; background: var(--dark); color: white;
+      border: none; border-radius: 8px; font-weight: 800; cursor: pointer; transition: 0.3s; font-size: 16px;
+    }
+    .submit-btn:hover { background: var(--accent); }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--bg3); padding: 70px 0 40px; border-top: 1px solid var(--border); margin-top: 80px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
+    .footer-grid h4 { color: var(--dark); margin-bottom: 20px; font-family: var(--font-display); }
+    .footer-grid a { color: var(--text3); display: block; margin-bottom: 12px; font-weight: 600; cursor: pointer; }
+    .footer-grid a:hover { color: var(--accent); }
+
+    @media (max-width: 1024px) {
+      .article-layout { flex-direction: column; }
+      .ad-sidebar-sticky { position: static; width: 100%; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo" onclick="showPage('home')">
+      <div class="logo-icon">🌿</div>
+      EcoFuture
+    </div>
+    <nav id="main-nav">
+      <a onclick="showPage('home')" class="active">Home</a>
+      <a onclick="showCat('Sustainable Home')">Sustainable Home</a>
+      <a onclick="showCat('Green Tech')">Green Tech</a>
+      <a onclick="showCat('Energy')">Energy</a>
+      <a onclick="showPage('contact')">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="ad-slot ad-leaderboard" style="margin-top: 30px;">
+    ADVERTISEMENT 970x90
+  </div>
+</div>
+
+<div id="page-home" class="page active">
+  <div class="container">
+    <div class="home-hero">
+      <div class="hero-label">Special Edition 2026</div>
+      <h1>The Path to a Greener World</h1>
+      <p class="hero-sub">Discover guides, innovations, and practical tips to reduce your carbon footprint and adopt a truly sustainable lifestyle at home and at work.</p>
+    </div>
+    <h2 class="section-header">Featured Articles</h2>
+    <div id="home-grid" class="articles-grid"></div>
+  </div>
+</div>
+
+<div id="page-category" class="page">
+  <div class="container">
+    <h2 class="section-header" id="cat-title" style="margin-top: 40px;">Category</h2>
+    <div id="cat-grid" class="articles-grid"></div>
+  </div>
+</div>
+
+<div id="page-article" class="page">
+  <div class="container" id="article-view-content"></div>
+</div>
+
+<div id="page-contact" class="page">
+  <div class="container">
+    <div class="contact-form">
+      <h2 style="font-family:var(--font-display); margin-bottom: 20px; color:var(--dark);">Contact EcoFuture</h2>
+      <p style="color:var(--text2); margin-bottom: 30px;">Do you have an ecological project you want to share or questions about our environmental guides?</p>
+      <form onsubmit="handleContact(event)">
+        <input type="text" required placeholder="Your Full Name">
+        <input type="email" required placeholder="email@example.com">
+        <textarea rows="6" required placeholder="How can we help you?"></textarea>
+        <button type="submit" class="submit-btn" id="s-btn">Send Message</button>
+        <p id="contact-success" style="display:none; color:var(--accent); margin-top:15px; text-align:center; font-weight:800;">Your message has been sent to nature!</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="page-privacy" class="page">
+  <div class="container">
+    <div class="legal-content">
+      <h1 style="font-family:var(--font-display); color:var(--dark); margin-bottom: 20px;">Privacy Policy</h1>
+      <p>At EcoFuture, we respect your privacy and are committed to protecting your personal data. This privacy notice will inform you as to how we look after your personal data when you visit our website.</p>
+      <p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows: Identity Data, Contact Data, and Technical Data (such as your IP address or browser type).</p>
+      <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data to provide you with the content you request and to improve our website experience.</p>
+    </div>
+  </div>
+</div>
+
+<div id="page-cookies" class="page">
+  <div class="container">
+    <div class="legal-content">
+      <h1 style="font-family:var(--font-display); color:var(--dark); margin-bottom: 20px;">Cookie Notice</h1>
+      <p>Our website uses cookies to distinguish you from other users of our website. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site.</p>
+      <p>A cookie is a small file of letters and numbers that we store on your browser or the hard drive of your computer. We use necessary cookies to make our site work, and analytical cookies to help us improve it by collecting and reporting information on how you use it.</p>
+      <p>You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies.</p>
+    </div>
+  </div>
+</div>
+
+<div id="page-terms" class="page">
+  <div class="container">
+    <div class="legal-content">
+      <h1 style="font-family:var(--font-display); color:var(--dark); margin-bottom: 20px;">Terms and Conditions</h1>
+      <p>Welcome to EcoFuture. These terms and conditions outline the rules and regulations for the use of our website.</p>
+      <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use EcoFuture if you do not agree to take all of the terms and conditions stated on this page.</p>
+      <p>Unless otherwise stated, EcoFuture and/or its licensors own the intellectual property rights for all material on the site. All intellectual property rights are reserved. You may access this from EcoFuture for your own personal use subjected to restrictions set in these terms.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="ad-slot ad-leaderboard" style="margin-bottom: 50px;">
+    BOTTOM ADVERTISEMENT
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 20px;" onclick="showPage('home')">
+          <div class="logo-icon">🌿</div>
+          EcoFuture
+        </div>
+        <p style="font-size: 15px; color: var(--text3); font-weight: 600;">Your number one source of verified information on sustainable tech and eco-friendly habits.</p>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <a onclick="showCat('Sustainable Home')">Sustainable Home</a>
+        <a onclick="showCat('Green Tech')">Green Tech</a>
+        <a onclick="showCat('Energy')">Free Energy</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a onclick="showPage('privacy')">Privacy Policy</a>
+        <a onclick="showPage('cookies')">Cookie Notice</a>
+        <a onclick="showPage('terms')">Terms and Conditions</a>
+      </div>
+    </div>
+    <div style="border-top: 1px solid var(--border); padding-top: 25px; text-align: center; font-size: 14px; color: var(--text3); font-weight: bold;">
+      © 2026 EcoFuture Media. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+// ===== ARTICLES DATA (ECO THEME) =====
+const articles = [
+  {
+    id: 0,
+    tag: "Energy",
+    title: "Solar Panels in 2026: Are They Really Worth It for Your Home?",
+    date: "May 15, 2026",
+    author: "Laura Mendes, Environmental Engineer",
+    img: "https://images.pexels.com/photos/9875679/pexels-photo-9875679.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "Photovoltaic technology has advanced by leaps and bounds. Discover how new graphene solar panels are changing the residential market.",
+    body: `
+      <p>The transition toward <strong>energy independence</strong> is no longer an exclusive option for luxury homes. In 2026, fossil fuel inflation and new global regulations have made installing solar energy an economically smart and accessible decision.</p>
+      <p>If you are wondering if you should make the leap, it is crucial to understand how solid-state batteries and new ultra-efficient panels have reduced the return on investment time from 10 years to just 4 years in most sunny climates.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>Take advantage of current government subsidies. Combining high-efficiency solar panels with a smart home storage system will protect you from grid outages and reduce your bill to practically zero.</p>
+      </div>
+      <h2>The End of Obsolete Panels</h2>
+      <img src="https://images.pexels.com/photos/8853503/pexels-photo-8853503.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Solar Panels Installation">
+      <p>Until recently, traditional monocrystalline panels captured around 20% of sunlight. Today, perovskite and graphene-based coatings allow for efficiencies exceeding 30%. This means you need <strong>less space on your roof</strong> to generate exactly the same amount of electricity, making it ideal for small houses or townhomes.</p>
+    `
+  },
+  {
+    id: 1,
+    tag: "Sustainable Home",
+    title: "Zero Waste for Beginners: 5 Steps to Eliminate Plastic",
+    date: "May 10, 2026",
+    author: "Carlos Ruiz, Eco Activist",
+    img: "https://images.pexels.com/photos/3735147/pexels-photo-3735147.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "Reducing your trash doesn't have to be overwhelming. A practical guide to transforming your kitchen and bathroom without spending a fortune.",
+    body: `
+      <p>The <strong>Zero Waste</strong> movement can seem intimidating on social media, where everything revolves around perfect glass jars. The reality in 2026 is much more pragmatic: it is about making smart consumption choices that not only help the planet but also benefit your wallet.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>Do not throw away your current plastics to buy eco-friendly alternatives. Use what you have until it breaks, and when you need to replace it, opt for bamboo, stainless steel, or glass.</p>
+      </div>
+      <h2>1. Bulk Shopping is the Norm</h2>
+      <img src="https://images.pexels.com/photos/4198947/pexels-photo-4198947.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Bulk Shopping Zero Waste">
+      <p>Supermarkets have changed. Bringing your own cloth bags to weigh legumes, pasta, and nuts is no longer a rarity. Eliminating single-use plastics from your weekly shopping automatically reduces 40% of the trash you produce at home.</p>
+      <h2>2. Odorless Urban Composting</h2>
+      <p>Thirty percent of our garbage is organic matter that ends up emitting methane in landfills. New electric kitchen composters dehydrate and grind food scraps in hours, without odor or flies, creating the perfect fertilizer for your indoor plants.</p>
+    `
+  },
+  {
+    id: 2,
+    tag: "Green Tech",
+    title: "Green Transportation: Beyond Electric Cars",
+    date: "May 5, 2026",
+    author: "Elena Soriano, Mobility Analyst",
+    img: "https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "Electric cargo bikes and long-range scooters are redefining how we move in major European cities.",
+    body: `
+      <p>While Electric Vehicles (EVs) have grabbed the headlines, the real micro-mobility revolution is happening in expanded bike lanes in cities worldwide. Adopting <strong>green mobility</strong> means rethinking urban space.</p>
+      <h2>E-Cargo Bikes</h2>
+      <img src="https://images.pexels.com/photos/10184845/pexels-photo-10184845.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Electric Cargo Bike in City">
+      <p>For urban families, the electric cargo bike has become the second car. Capable of carrying two children and the weekly groceries with pedal assistance, these bikes avoid traffic jams and do not require paying for parking, drastically reducing daily CO2 emissions.</p>
+    `
+  },
+  {
+    id: 3,
+    tag: "Energy",
+    title: "Home Wind Turbines: A Realistic Option for 2026?",
+    date: "April 28, 2026",
+    author: "Marc Oliveira, Renewable Energy Consultant",
+    img: "https://images.pexels.com/photos/532192/pexels-photo-532192.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "Small vertical-axis wind turbines are entering the residential market. We analyze whether they make sense for the average homeowner.",
+    body: `
+      <p>For years, <strong>wind energy</strong> was considered exclusively an industrial-scale technology. That is changing rapidly as compact turbine designs become quieter, more efficient, and affordable for suburban homes.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>Home wind turbines work best as a complement to solar panels, not a replacement. In areas with consistent wind above 12 km/h, the combination can achieve near-total energy independence.</p>
+      </div>
+      <h2>Vertical vs. Horizontal Axis</h2>
+      <img src="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Small Wind Turbine">
+      <p>Vertical-axis turbines are the go-to choice for residential settings. They operate silently, handle turbulent urban wind patterns better, and do not require pointing into the wind — making installation simpler and safer on rooftops.</p>
+    `
+  },
+  {
+    id: 4,
+    tag: "Sustainable Home",
+    title: "Biophilic Design: How to Bring Nature Inside Your Home",
+    date: "April 22, 2026",
+    author: "Sofia Andersen, Interior Architect",
+    img: "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "Integrating natural materials, living walls, and organic shapes into your living space reduces stress and improves air quality.",
+    body: `
+      <p>Biophilic design goes beyond placing a few potted plants on a windowsill. It is a philosophy that reconnects built environments with the natural world, with measurable effects on <strong>mental health, productivity, and indoor air quality</strong>.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>Start with a living moss wall in a high-traffic room. Moss requires no soil or watering, absorbs sound, and creates an instant connection to the outdoors without maintenance.</p>
+      </div>
+      <h2>Natural Materials Over Synthetics</h2>
+      <img src="https://images.pexels.com/photos/5825366/pexels-photo-5825366.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Biophilic Interior Design">
+      <p>Replacing synthetic flooring with cork, bamboo, or reclaimed wood is one of the highest-impact changes you can make. These materials are carbon-neutral, durable, and far healthier than petroleum-based alternatives.</p>
+    `
+  },
+  {
+    id: 5,
+    tag: "Green Tech",
+    title: "Smart Home Energy Monitors: The Best of 2026",
+    date: "April 18, 2026",
+    author: "Nadia Ferreira, Tech Reviewer",
+    img: "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "Real-time energy monitoring systems are now affordable and easy to install. Here are the top models that can cut your electricity bill by up to 30%.",
+    body: `
+      <p>You cannot reduce what you cannot measure. <strong>Smart energy monitors</strong> clip onto your main circuit breaker and provide second-by-second data on every appliance in your home, sent directly to your smartphone.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>The average household wastes 23% of its electricity on standby consumption. A smart monitor pays for itself in under six months by identifying phantom loads you never knew existed.</p>
+      </div>
+      <h2>AI-Powered Recommendations</h2>
+      <img src="https://images.pexels.com/photos/8353609/pexels-photo-8353609.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Smart Home Tech">
+      <p>The latest generation of energy monitors uses machine learning to analyze your consumption patterns and proactively suggest the optimal times to run dishwashers, washing machines, or EV chargers based on grid pricing and your solar production.</p>
+    `
+  },
+  {
+    id: 6,
+    tag: "Sustainable Home",
+    title: "Rainwater Harvesting: A Complete Setup Guide",
+    date: "April 14, 2026",
+    author: "James Whitfield, Water Systems Engineer",
+    img: "https://images.pexels.com/photos/1453499/pexels-photo-1453499.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "Collecting and reusing rainwater for your garden and toilets can reduce your household water consumption by up to 50%.",
+    body: `
+      <p>Water scarcity is becoming a reality in more regions every year. A simple <strong>rainwater harvesting system</strong> requires only a storage tank, a filter, and a connection to your downspouts — and it pays for itself within two to three seasons.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>A 5,000-liter underground cistern is the sweet spot for most households. It is enough to irrigate a 100 m² garden through a full dry summer without touching the municipal supply.</p>
+      </div>
+      <h2>First Flush Diverters</h2>
+      <img src="https://images.pexels.com/photos/2501965/pexels-photo-2501965.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Water Harvesting System">
+      <p>The first few millimeters of rainfall wash dust, bird droppings, and debris off your roof. A first-flush diverter automatically discards this contaminated water before routing the clean remainder into your storage tank — a critical component often overlooked by DIY installers.</p>
+    `
+  },
+  {
+    id: 7,
+    tag: "Green Tech",
+    title: "Heat Pumps vs. Gas Boilers: The Definitive 2026 Comparison",
+    date: "April 9, 2026",
+    author: "Ana Kovacs, Building Systems Specialist",
+    img: "https://images.pexels.com/photos/7005392/pexels-photo-7005392.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "With natural gas prices at historic highs, is now the right moment to switch to an air-source heat pump? We break down the real costs.",
+    body: `
+      <p>A heat pump does not generate heat — it <strong>moves it</strong>. By extracting thermal energy from outdoor air (even at -15°C), it delivers three to four units of heat for every unit of electricity consumed, making it dramatically more efficient than any gas boiler.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>If your home is well-insulated, a heat pump will cost less to run than a gas boiler from day one. The upfront cost is higher, but EU subsidies in 2026 cover up to 45% of installation.</p>
+      </div>
+      <h2>Cold Climate Performance</h2>
+      <img src="https://images.pexels.com/photos/4388164/pexels-photo-4388164.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Heat Pump Unit">
+      <p>Modern inverter-driven heat pumps maintain full heating capacity down to -25°C — a common objection thoroughly addressed by the latest generation of Nordic-engineered units now widely available across Europe.</p>
+    `
+  },
+  {
+    id: 8,
+    tag: "Energy",
+    title: "Community Solar: Share a Panel, Cut Your Bill",
+    date: "April 3, 2026",
+    author: "Rosa Iglesias, Energy Policy Analyst",
+    img: "https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "You don't need a roof to benefit from solar energy. Community solar programs let renters and apartment dwellers subscribe to shared solar farms.",
+    body: `
+      <p><strong>Community solar</strong> is one of the fastest-growing energy models in Europe and North America. Subscribers buy or lease a share of a solar farm located within their utility zone and receive credits on their electricity bill equal to the energy their panels produce.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>Community solar is ideal for renters, those with shaded or north-facing roofs, and anyone who wants to go solar without a large upfront investment or dealing with permits and installers.</p>
+      </div>
+      <h2>How Credits Work</h2>
+      <img src="https://images.pexels.com/photos/9875679/pexels-photo-9875679.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Solar Farm">
+      <p>Each month, your virtual share of the solar farm generates a certain number of kilowatt-hours. These are credited directly against your utility bill at the retail electricity rate, typically saving subscribers between 10% and 20% annually.</p>
+    `
+  },
+  {
+    id: 9,
+    tag: "Sustainable Home",
+    title: "Passive House Principles You Can Apply to Any Home",
+    date: "March 28, 2026",
+    author: "Thomas Bauer, Certified Passive House Designer",
+    img: "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "You don't need to build from scratch to apply passive house logic. These retrofitting strategies dramatically reduce heating and cooling needs.",
+    body: `
+      <p>Passive house design is built on five pillars: <strong>superior insulation, thermal-bridge-free construction, high-quality windows, airtight envelope, and heat recovery ventilation</strong>. Even applying two or three of these to an existing home can cut energy bills by 60%.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>Prioritize airtightness first. Sealing gaps around windows, doors, and service penetrations costs almost nothing and delivers immediate, measurable results on your heating bills.</p>
+      </div>
+      <h2>Triple-Glazed Windows</h2>
+      <img src="https://images.pexels.com/photos/5825576/pexels-photo-5825576.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Triple Glazed Windows">
+      <p>Upgrading to triple-glazed, thermally broken window frames is the single highest-impact retrofit for most European homes. They eliminate cold radiant surfaces, prevent condensation and mold, and contribute meaningfully to acoustic comfort.</p>
+    `
+  },
+  {
+    id: 10,
+    tag: "Green Tech",
+    title: "Vertical Farming at Home: Grow Food in 1 Square Meter",
+    date: "March 22, 2026",
+    author: "Priya Nair, Urban Agriculture Researcher",
+    img: "https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "New compact hydroponic towers let you grow lettuce, herbs, and strawberries year-round in your kitchen or balcony with minimal effort.",
+    body: `
+      <p>Indoor vertical farming has moved from commercial warehouses to kitchen countertops. Modern <strong>hydroponic towers</strong> use 95% less water than soil farming, require no pesticides, and produce harvests 30% faster thanks to optimized LED spectrum lighting.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>A 12-pod hydroponic tower consumes about as much electricity as a light bulb. In six weeks, it will provide more fresh herbs and greens than most families buy in a month — and the flavor difference versus supermarket produce is dramatic.</p>
+      </div>
+      <h2>What Grows Best</h2>
+      <img src="https://images.pexels.com/photos/1442005/pexels-photo-1442005.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Indoor Hydroponics">
+      <p>Leafy greens, basil, mint, cilantro, cherry tomatoes, and strawberries are the ideal crops for home systems. Root vegetables and grains are not viable, but for fresh daily produce, a compact tower more than covers your needs.</p>
+    `
+  },
+  {
+    id: 11,
+    tag: "Energy",
+    title: "Understanding Your Carbon Footprint: A Practical Breakdown",
+    date: "March 17, 2026",
+    author: "David Chen, Climate Scientist",
+    img: "https://images.pexels.com/photos/60013/desert-drought-dehydrated-clay-soil-60013.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "Before you can reduce your emissions, you need to know where they actually come from. The answer might surprise you.",
+    body: `
+      <p>Most people dramatically underestimate the carbon impact of their diet and overestimate the impact of forgetting to turn off a light. <strong>Food production accounts for roughly 26% of global emissions</strong> — and within that, beef alone is responsible for more than all transportation combined.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>The three highest-impact actions any individual can take are: eat less beef, avoid one long-haul flight per year, and switch to an electric vehicle or go car-free. Everything else is secondary.</p>
+      </div>
+      <h2>The Flight Problem</h2>
+      <img src="https://images.pexels.com/photos/2088210/pexels-photo-2088210.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Airplane Emissions">
+      <p>A single transatlantic round trip generates approximately 1.5 to 3 tonnes of CO2 equivalent per passenger — more than the average person in many countries produces from all other activities in an entire year. Frequency matters enormously.</p>
+    `
+  },
+  {
+    id: 12,
+    tag: "Sustainable Home",
+    title: "Natural Cleaning Products: What Actually Works",
+    date: "March 11, 2026",
+    author: "Isabel Torres, Biochemist",
+    img: "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "Vinegar, baking soda, and castile soap do more than most commercial cleaners — without releasing endocrine-disrupting chemicals into your home.",
+    body: `
+      <p>The average household cleaning product contains between 5 and 15 synthetic chemicals, many of which have never been independently tested for safety. Switching to <strong>natural alternatives</strong> is not just better for the environment — it is better for your lungs, skin, and hormone balance.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>White vinegar diluted 1:1 with water cleans 90% of household surfaces effectively. Add a few drops of tea tree oil for antibacterial action and you have a product that outperforms most commercial sprays.</p>
+      </div>
+      <h2>What Baking Soda Cannot Do</h2>
+      <img src="https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Natural Cleaning Supplies">
+      <p>Despite its reputation, baking soda is not a disinfectant and does not kill viruses or bacteria. It excels as a mild abrasive for scrubbing and as an odor neutralizer, but should not replace a proper disinfectant in kitchens and bathrooms.</p>
+    `
+  },
+  {
+    id: 13,
+    tag: "Green Tech",
+    title: "EV Charging at Home: Everything You Need to Know",
+    date: "March 5, 2026",
+    author: "Lucas Petit, Automotive Engineer",
+    img: "https://images.pexels.com/photos/3846205/pexels-photo-3846205.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "Installing a home EV charger is simpler and cheaper than most drivers think. A complete guide to charger types, costs, and grid considerations.",
+    body: `
+      <p>Charging an electric vehicle at home on a standard wall outlet works, but a dedicated <strong>Level 2 charger</strong> is the real game-changer. It charges 8 to 10 times faster, is safer for your battery's long-term health, and can integrate with your solar panels to charge exclusively on clean energy.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>A 7.4 kW home charger will fully replenish most modern EVs overnight. Combined with a time-of-use electricity tariff and solar panels, your per-kilometer fuel cost drops to near zero.</p>
+      </div>
+      <h2>Smart Charging Features</h2>
+      <img src="https://images.pexels.com/photos/3846205/pexels-photo-3846205.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="EV Charger at Home">
+      <p>Smart chargers can be scheduled to charge during off-peak hours when grid electricity is cheapest and greenest. The most advanced models support vehicle-to-home (V2H) technology, using your car battery to power your house during peak demand or outages.</p>
+    `
+  },
+  {
+    id: 14,
+    tag: "Energy",
+    title: "Solid-State Batteries: The Future of Home Energy Storage",
+    date: "February 27, 2026",
+    author: "Kenji Yamamoto, Materials Scientist",
+    img: "https://images.pexels.com/photos/159397/solar-panel-array-power-sun-159397.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "The first solid-state home battery systems are hitting the market. We explain why they are safer, longer-lasting, and more efficient than current lithium-ion options.",
+    body: `
+      <p>Solid-state batteries replace the liquid electrolyte in conventional lithium-ion cells with a solid ceramic or polymer material. The result is a battery that cannot leak, is <strong>far less likely to catch fire</strong>, operates across a wider temperature range, and retains 90% capacity after 3,000+ charge cycles.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>Solid-state home storage systems are currently 40% more expensive than lithium-ion equivalents, but their longer lifespan and lower degradation rate mean the total cost of ownership is already competitive. Prices are expected to reach parity by 2028.</p>
+      </div>
+      <h2>Capacity and Use Cases</h2>
+      <img src="https://images.pexels.com/photos/256379/pexels-photo-256379.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Home Battery Storage">
+      <p>Current residential solid-state units range from 10 to 30 kWh. A 15 kWh system is sufficient to power an average European home through the night on solar energy generated during the day, eliminating grid dependence for 8 months of the year.</p>
+    `
+  },
+  {
+    id: 15,
+    tag: "Sustainable Home",
+    title: "The Capsule Wardrobe: How Buying Less Saves the Planet",
+    date: "February 20, 2026",
+    author: "Marie Leclerc, Sustainable Fashion Consultant",
+    img: "https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    lead: "The fashion industry is the world's second most polluting sector. A capsule wardrobe of 33 items can replace a closet of 200 — and look better doing it.",
+    body: `
+      <p>The average garment in a fast-fashion wardrobe is worn just <strong>7 to 10 times before disposal</strong>. Synthetic fabrics shed microplastics with every wash, and the dyeing process is responsible for 20% of global industrial water pollution. The most sustainable item of clothing is one that already exists.</p>
+      <div class="verdict-box">
+        <h3>💡 Expert Summary</h3>
+        <p>Build your capsule around neutral tones, natural fibers, and versatile silhouettes. Invest in three pairs of high-quality shoes instead of fifteen cheap ones. Cost-per-wear is the only metric that matters.</p>
+      </div>
+      <h2>The 30-Wear Rule</h2>
+      <img src="https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?auto=compress&cs=tinysrgb&w=800" class="article-body-img" alt="Capsule Wardrobe Clothing">
+      <p>Before buying any new item, ask yourself: will I wear this at least 30 times? If the honest answer is no, it is likely a trend-driven impulse purchase that will end up in landfill within two years. This single mental filter eliminates the vast majority of unsustainable purchases.</p>
+    `
+  }
+];
+
+// ===== NAVIGATION LOGIC =====
+function slugify(text) {
+  return text.toString().toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, '-').replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-').replace(/^-+/, '').replace(/-+$/, '');
+}
+
+function showPage(pageId, updateUrl = true) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + pageId).classList.add('active');
+  document.querySelectorAll('#main-nav a').forEach(a => a.classList.remove('active'));
+  
+  if (updateUrl) {
+    const url = pageId === 'home' ? '/' : '/' + pageId;
+    window.history.pushState({page: pageId}, '', url);
+  }
+  window.scrollTo(0, 0);
+}
+
+function showCat(category) {
+  const filtered = articles.filter(a => a.tag === category);
+  document.getElementById('cat-title').innerText = category;
+  document.getElementById('cat-grid').innerHTML = filtered.length > 0 
+    ? filtered.map(a => renderCard(a)).join('') 
+    : '<p style="color:var(--text); font-weight:bold;">We will publish articles in this section soon.</p>';
+  showPage('category');
+}
+
+function openArticle(id, updateUrl = true) {
+  const art = articles.find(a => a.id == id);
+  if(!art) return;
+  
+  document.getElementById('article-view-content').innerHTML = `
+    <div class="article-layout">
+      <div class="article-main">
+        <a onclick="showPage('home')" style="font-weight:900; font-size:14px; text-transform:uppercase; letter-spacing: 1px; cursor:pointer;">← Back to Home</a>
+        <h1 style="font-family:var(--font-display); font-size:clamp(32px, 4vw, 46px); line-height:1.2; margin:25px 0; color:var(--dark);">${art.title}</h1>
+        <p style="color:var(--text3); font-size:15px; margin-bottom:20px; font-weight:600;">By <strong style="color:var(--dark);">${art.author}</strong> | ${art.date} | <span style="color:var(--accent); font-weight:800;">${art.tag}</span></p>
+        
+        <p style="font-size:20px; color:var(--text2); font-weight:600;">${art.lead}</p>
+        <img src="${art.img}" class="article-hero-img" alt="${art.title}">
+        
+        <div class="article-content">${art.body}</div>
+      </div>
+      
+      <aside class="ad-sidebar-sticky">
+        <div class="ad-slot" style="min-height: 600px; width: 300px;">
+          SIDEBAR ADVERTISEMENT 300x600
+        </div>
+        
+        <div style="background: var(--card); padding: 30px; border-radius: var(--radius); margin-top: 35px; border: 1px solid var(--border); box-shadow: var(--shadow);">
+          <h3 style="margin-bottom: 20px; font-size: 18px; font-family:var(--font-display); color: var(--dark);">Most Read Guides</h3>
+          <ul style="list-style: none; font-size: 15px; font-weight: 600;">
+            <li style="border-bottom: 1px solid var(--border); padding: 12px 0; color:var(--text); cursor:pointer;">→ Recycle Correctly</li>
+            <li style="border-bottom: 1px solid var(--border); padding: 12px 0; color:var(--text); cursor:pointer;">→ Solar Batteries 2026</li>
+            <li style="padding: 12px 0; color:var(--text); cursor:pointer;">→ Indoor Garden Setup</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  `;
+  showPage('article', false);
+  
+  if (updateUrl) {
+    window.history.pushState({articleId: id}, art.title, '/' + slugify(art.title));
+  }
+  document.title = art.title + " | EcoFuture";
+}
+
+function renderCard(a) {
+  return `
+    <div class="article-card" onclick="openArticle(${a.id})">
+      <img src="${a.img}" alt="${a.title}">
+      <div class="article-card-body">
+        <span class="tag">${a.tag}</span>
+        <h3 style="font-size:22px; line-height:1.3; margin-bottom:15px; color:var(--dark); font-family:var(--font-display);">${a.title}</h3>
+        <div style="font-size:14px; color:var(--text3); font-weight: 800;">${a.date} • Read Guide →</div>
+      </div>
+    </div>
+  `;
+}
+
+function handleContact(e) {
+  e.preventDefault();
+  const btn = document.getElementById('s-btn');
+  btn.innerText = "Processing...";
+  setTimeout(() => {
+    btn.innerText = "Send Message";
+    document.getElementById('contact-success').style.display = "block";
+    e.target.reset();
+  }, 1000);
+}
+
+window.onload = () => {
+  document.getElementById('home-grid').innerHTML = articles.map(a => renderCard(a)).join('');
+};
+</script>
+</body>
+</html>
