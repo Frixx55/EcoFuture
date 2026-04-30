@@ -1,8 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
   <url>
     <loc>https://ecofuture.blog/</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Main category sections -->
+  <url>
+    <loc>https://ecofuture.blog/sustainable-home/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ecofuture.blog/green-tech/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ecofuture.blog/energy/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Static pages -->
+  <url>
+    <loc>https://ecofuture.blog/about/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://ecofuture.blog/contact/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Legal pages -->
+  <url>
+    <loc>https://ecofuture.blog/privacy/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://ecofuture.blog/cookies/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://ecofuture.blog/terms/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
 </urlset>
