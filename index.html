@@ -1200,18 +1200,28 @@ function openArticle(id, updateUrl = true) {
         
         <div class="article-content">${art.body}</div>
       </div>
-        
-        <div style="background: var(--card); padding: 30px; border-radius: var(--radius); margin-top: 35px; border: 1px solid var(--border); box-shadow: var(--shadow);">
-          <h3 style="margin-bottom: 20px; font-size: 18px; font-family:var(--font-display); color: var(--dark);">Most Read Guides</h3>
+
+      <!-- ESTE ES EL BLOQUE QUE CAMBIA: -->
+      <aside class="ad-sidebar-sticky" style="width: 300px; position: sticky; top: 100px;">
+        <div style="background: var(--card); padding: 25px; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow);">
+          <h3 style="margin-bottom: 20px; font-size: 18px; font-family:var(--font-display); color: var(--dark); border-bottom: 2px solid var(--border); padding-bottom: 10px;">Most Read Guides</h3>
           <ul style="list-style: none; font-size: 15px; font-weight: 600;">
-            <li style="border-bottom: 1px solid var(--border); padding: 12px 0; color:var(--text); cursor:pointer;">→ Recycle Correctly</li>
-            <li style="border-bottom: 1px solid var(--border); padding: 12px 0; color:var(--text); cursor:pointer;">→ Solar Batteries 2026</li>
-            <li style="padding: 12px 0; color:var(--text); cursor:pointer;">→ Indoor Garden Setup</li>
+            <li style="border-bottom: 1px solid var(--bg3); padding: 12px 0;">
+              <a onclick="openArticle(0)" style="color:var(--text); cursor:pointer;">→ Solar Panels Guide</a>
+            </li>
+            <li style="border-bottom: 1px solid var(--bg3); padding: 12px 0;">
+              <a onclick="openArticle(10)" style="color:var(--text); cursor:pointer;">→ Vertical Farming</a>
+            </li>
+            <li style="padding: 12px 0;">
+              <a onclick="openArticle(13)" style="color:var(--text); cursor:pointer;">→ EV Charging Guide</a>
+            </li>
           </ul>
         </div>
       </aside>
     </div>
   `;
+
+  // ... resto de la función (showPage, updateUrl, etc.)
   showPage('article', false);
   
   if (updateUrl) {
