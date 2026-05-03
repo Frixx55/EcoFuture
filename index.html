@@ -440,6 +440,21 @@
 </footer>
 
 <script>
+
+  // Función para abrir/cerrar el menú en móviles
+function toggleMobileMenu() {
+  const nav = document.getElementById('main-nav');
+  // Alterna la clase 'mobile-open' que definimos en el CSS del Paso 2
+  nav.classList.toggle('mobile-open');
+}
+
+// Opcional pero recomendado: Cerrar el menú automáticamente al hacer clic en un enlace
+// Así, cuando el usuario elija una categoría, el menú no se quedará estorbando.
+document.querySelectorAll('#main-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('main-nav').classList.remove('mobile-open');
+  });
+});
 // ===== ARTICLES DATA (ECO THEME) =====
 const articles = [
   {
