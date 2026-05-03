@@ -263,7 +263,39 @@
     @media (max-width: 1024px) {
       .article-layout { flex-direction: column; }
       .ad-sidebar-sticky { position: static; width: 100%; }
-      nav { display: none; }
+      
+      /* 1. Mostramos el icono de hamburguesa */
+      #mobile-icon { 
+        display: block !important; 
+      }
+
+      /* 2. Configuramos el menú para que sea una lista vertical flotante */
+      nav { 
+        display: none; /* Inicialmente oculto */
+        flex-direction: column;
+        position: absolute;
+        top: 75px; /* Altura del header para que flote debajo */
+        left: 0;
+        width: 100%;
+        background: var(--bg);
+        padding: 20px 0;
+        border-bottom: 2px solid var(--border);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        z-index: 1000;
+      }
+
+      /* 3. Clase que activaremos con JS para mostrar el menú */
+      nav.mobile-open { 
+        display: flex !important; 
+      }
+
+      /* 4. Estilizamos los enlaces para que ocupen toda la línea */
+      nav a { 
+        width: 100%; 
+        text-align: center; 
+        padding: 15px 0;
+        border-radius: 0; /* Quitamos el redondeado de PC */
+      }
     }
   </style>
 </head>
@@ -283,6 +315,7 @@
       <a onclick="showPage('about')">About Us</a>
       <a onclick="showPage('contact')">Contact</a>
     </nav>
+    <div id="mobile-icon" onclick="toggleMobileMenu()" style="display:none; font-size: 30px; cursor: pointer; color: var(--dark); margin-left: auto;">☰</div>
   </div>
 </header>
 
