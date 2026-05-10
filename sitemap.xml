@@ -1,74 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://ecofuture.blog/</loc></url>
+  <url><loc>https://ecofuture.blog/about</loc></url>
+  <url><loc>https://ecofuture.blog/contact</loc></url>
+  <url><loc>https://ecofuture.blog/privacy</loc></url>
+  <url><loc>https://ecofuture.blog/cookies</loc></url>
+  <url><loc>https://ecofuture.blog/terms</loc></url>
 
-  <!-- Homepage -->
-  <url>
-    <loc>https://ecofuture.blog/</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Main category sections -->
-  <url>
-    <loc>https://ecofuture.blog/sustainable-home/</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://ecofuture.blog/green-tech/</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://ecofuture.blog/energy/</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Static pages -->
-  <url>
-    <loc>https://ecofuture.blog/about/</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://ecofuture.blog/contact/</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Legal pages -->
-  <url>
-    <loc>https://ecofuture.blog/privacy/</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
-  <url>
-    <loc>https://ecofuture.blog/cookies/</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
-  <url>
-    <loc>https://ecofuture.blog/terms/</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
+  <url><loc>https://ecofuture.blog/solar-panels-in-2026-are-they-really-worth-it-for-your-home</loc></url>
+  <url><loc>https://ecofuture.blog/zero-waste-for-beginners-5-steps-to-eliminate-plastic</loc></url>
+  <url><loc>https://ecofuture.blog/green-transportation-beyond-electric-cars</loc></url>
+  <url><loc>https://ecofuture.blog/home-wind-turbines-a-realistic-option-for-2026</loc></url>
+  <url><loc>https://ecofuture.blog/biophilic-design-how-to-bring-nature-inside-your-home</loc></url>
+  <url><loc>https://ecofuture.blog/smart-home-energy-monitors-the-best-of-2026</loc></url>
+  <url><loc>https://ecofuture.blog/rainwater-harvesting-a-complete-setup-guide</loc></url>
+  <url><loc>https://ecofuture.blog/heat-pumps-vs-gas-boilers-the-definitive-2026-comparison</loc></url>
+  <url><loc>https://ecofuture.blog/community-solar-share-a-panel-cut-your-bill</loc></url>
+  <url><loc>https://ecofuture.blog/passive-house-principles-you-can-apply-to-any-home</loc></url>
+  <url><loc>https://ecofuture.blog/vertical-farming-at-home-grow-food-in-1-square-meter</loc></url>
+  <url><loc>https://ecofuture.blog/understanding-your-carbon-footprint-a-practical-breakdown</loc></url>
+  <url><loc>https://ecofuture.blog/natural-cleaning-products-what-actually-works</loc></url>
+  <url><loc>https://ecofuture.blog/ev-charging-at-home-everything-you-need-to-know</loc></url>
+  <url><loc>https://ecofuture.blog/solid-state-batteries-the-future-of-home-energy-storage</loc></url>
+  <url><loc>https://ecofuture.blog/the-capsule-wardrobe-how-buying-less-saves-the-planet</loc></url>
+  <url><loc>https://ecofuture.blog/eco-friendly-insulation-keeping-your-home-warm</loc></url>
+  <url><loc>https://ecofuture.blog/smart-thermostats-save-energy-automatically</loc></url>
+  <url><loc>https://ecofuture.blog/micro-hydro-power-for-rural-homes</loc></url>
+  <url><loc>https://ecofuture.blog/upcycling-furniture-a-beginner-s-guide</loc></url>
 </urlset>
