@@ -1306,7 +1306,6 @@ async function handleWeb3Forms(e) {
   const successMsg = document.getElementById('contact-success');
   const errorMsg = document.getElementById('contact-error');
 
-  // Estado de carga
   btn.innerText = "Transmitting to the cloud...";
   btn.disabled = true;
   successMsg.style.display = "none";
@@ -1329,24 +1328,19 @@ async function handleWeb3Forms(e) {
     const result = await response.json();
 
     if (response.status === 200) {
-      // Éxito total
       btn.innerText = "Sent Successfully!";
       btn.style.background = "#2F8F6B";
       successMsg.style.display = "block";
       form.reset();
     } else {
-      // Error del servidor
-      console.log(result);
       throw new Error();
     }
   } catch (error) {
-    // Error de red
     btn.innerText = "Error - Try Again";
     btn.disabled = false;
     errorMsg.style.display = "block";
   }
-}000);
-}
+} // <--- Así debe terminar, sin números ni paréntesis raros.
 
 window.onpopstate = (event) => {
   if (event.state && event.state.articleId !== undefined) {
